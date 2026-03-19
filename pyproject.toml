@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "AdaptMolMAC"
+version = "0.1.0"
+description = "Adaptive multi-access molecular communication toolkit for simulation, signal processing, channel estimation, and decoding."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Si Shen" }
+]
+keywords = ["molecular communication", "adaptive decoding", "simulation", "signal processing", "viterbi"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "pykalman",
+  "scikit-image",
+  "scikit-learn",
+  "scipy",
+]
+
+[tool.setuptools]
+include-package-data = true
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+dev = [
+  "build",
+  "sphinx",
+]
+
+[project.scripts]
+adaptmolmac = "AdaptMolMAC.cli:run"
+
+[tool.setuptools.packages.find]
+include = ["AdaptMolMAC", "AdaptMolMAC.*"]

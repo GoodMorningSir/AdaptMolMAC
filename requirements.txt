@@ -1,0 +1,12 @@
+# Runtime dependencies
+matplotlib
+numpy
+pandas
+pykalman
+scikit-image
+scikit-learn
+scipy
+
+# Development and documentation tools
+build
+sphinx
